@@ -53,6 +53,7 @@ def creer_graphique(debut_interval, fin_interval, nb_points):
 def estimer_pi_monte_carlo(nb_de_points):
     points_totaux = 0
     points_dans_cercle = 0
+    liste_points = []
 
 
     while True :
@@ -60,11 +61,17 @@ def estimer_pi_monte_carlo(nb_de_points):
 
         points_totaux += 1
 
-        if (point_aleatoire[0]**2 + point_aleatoire[1]**2) <= 1:
+        norme = point_aleatoire[0] ** 2 + point_aleatoire[1] ** 2
+
+        liste_points.append(point_aleatoire)
+
+
+
+        if (norme) <= 1:
             points_dans_cercle += 1
 
         if points_totaux == nb_de_points:
-            return (points_dans_cercle*4/points_totaux)
+            return (points_dans_cercle*4/points_totaux, liste_points)
 
 
 
