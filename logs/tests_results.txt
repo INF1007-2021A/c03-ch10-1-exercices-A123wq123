@@ -1,0 +1,32 @@
+test_closest (__main__.TestExercice) ... FAIL
+test_coordinates (__main__.TestExercice) ... ERROR
+test_linear_values (__main__.TestExercice) ... ERROR
+
+======================================================================
+ERROR: test_coordinates (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 26, in test_coordinates
+    output = exercice.coordinate_conversion(cartesian_coordinates)
+AttributeError: module 'exercice' has no attribute 'coordinate_conversion'
+
+======================================================================
+ERROR: test_linear_values (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 15, in test_linear_values
+    output = list(exercice.linear_values())
+AttributeError: module 'exercice' has no attribute 'linear_values'
+
+======================================================================
+FAIL: test_closest (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 42, in test_closest
+    self.assertEqual(
+AssertionError: 0 != 3 : Erreur dans le remplacement de caractère
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1, errors=2)
